@@ -173,9 +173,7 @@ OUTPUT_ROOT=/path/to/runs bash opd/scripts/criticopd/ablation.sh generic_feedbac
 
 The variants of block (a) up to `critic_reference_answer` and those of block (c) use a single-error
 critic with a 512-token limit. `all_errors` switches to the multi-error critic, whose limit is 1,024
-tokens, and `limit_2048` raises the limit to 2,048 tokens. The rows of block (b) and the sensitivity
-runs change `limit_2048`, which does not append the reference answer to the critique
-(`CRITIC_OPD_FB_ANSWER=0`). To apply a change to the final configuration instead, call `train.sh` with
+tokens, and `limit_2048` raises the limit to 2,048 tokens. To apply a change to the final configuration instead, call `train.sh` with
 the corresponding switch, for example `CRITIC_OPD_FB_MODE=generic bash opd/scripts/criticopd/train.sh`.
 
 ## Evaluation
